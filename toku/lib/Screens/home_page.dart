@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:toku/Screens/color.dart';
+import 'package:toku/Screens/familymember_page.dart';
 import 'package:toku/Screens/numbers_page.dart';
 import 'package:toku/components/category_items.dart';
 
@@ -8,11 +10,14 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xfffef6db),
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(244, 102, 50, 43),
-        title: const Text('Toku'),
+        title: const Text(
+          'Toku',
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: const Color(0xff46322B),
       ),
+      backgroundColor: const Color(0xfffef6db),
       body: Column(children: [
         Category(
           ontap: () {
@@ -29,7 +34,7 @@ class HomePage extends StatelessWidget {
           ontap: () {
             Navigator.push(context, MaterialPageRoute(
               builder: (context) {
-                return const NumbersPage();
+                return const FamilyPage();
               },
             ));
           },
@@ -38,7 +43,11 @@ class HomePage extends StatelessWidget {
         ),
         Category(
           ontap: () {
-            print('Colors tapped');
+            Navigator.push(context, MaterialPageRoute(
+              builder: (context) {
+                return const ColorsPage();
+              },
+            ));
           },
           text: 'Colors',
           color: const Color(0xff7e3fa3),
