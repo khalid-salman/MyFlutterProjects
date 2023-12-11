@@ -71,7 +71,7 @@ class NumbersPage extends StatelessWidget {
         itemBuilder: (context, index) {
           return Item(
             pageitem: numberslist[index],
-            color: Color(0xffef9235),
+            color: const Color(0xffef9235),
           );
         },
       ),

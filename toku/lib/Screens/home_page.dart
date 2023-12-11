@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:toku/Screens/color.dart';
 import 'package:toku/Screens/familymember_page.dart';
 import 'package:toku/Screens/numbers_page.dart';
+import 'package:toku/Screens/phrases_page.dart';
 import 'package:toku/components/category_items.dart';
 
 class HomePage extends StatelessWidget {
@@ -54,7 +55,11 @@ class HomePage extends StatelessWidget {
         ),
         Category(
           ontap: () {
-            print('Phares tapped');
+            Navigator.push(context, MaterialPageRoute(
+              builder: (context) {
+                return const PhrasesPage();
+              },
+            ));
           },
           text: 'Phares',
           color: const Color(0xff48a5cc),

@@ -43,7 +43,7 @@ class ColorsPage extends StatelessWidget {
     ItemModel(
         sound: 'sounds/colors/yellow.wav',
         image: 'assets/images/colors/yellow.png',
-        jpName: 'Kiiro',
+        jpName: 'Kiirogit ',
         enName: 'yellow'),
   ];
   @override
